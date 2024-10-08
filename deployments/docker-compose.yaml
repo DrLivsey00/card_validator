@@ -9,7 +9,7 @@ services:
     ports:
       - '${HOST_PORT}:8080'
     env_file:
-      - ./configs/.env
+    - .env
     deploy:
       mode: replicated
       replicas: 1

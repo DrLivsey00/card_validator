@@ -36,7 +36,7 @@ func main() {
 	}
 
 	config := config.LoadConfig()
-	logger.Infof("Using host port: %s", config.Host)
+	logger.Infof("Using host: %s", config.Host)
 
 	services := service.NewService()
 	handlers := handlers.NewHandlers(services)
