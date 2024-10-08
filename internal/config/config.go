@@ -6,12 +6,12 @@ import (
 )
 
 type Config struct {
-	HostPort string
+	Host string
 }
 
 func LoadConfig() *Config {
 	return &Config{
-		HostPort: EnvString("HOST_PORT", ":8080"),
+		Host: EnvString("HOST_ADDR", "0.0.0.0") + EnvString("HOST_PORT", ":8080"),
 	}
 }
 

@@ -59,7 +59,7 @@ func IsValidExpDate(expMonth, expYear int) (bool, error, string) {
 		return false, errors.New("expiration month must be between 1 and 12"), "003"
 	}
 	if currentYear > expYear {
-		return false, errors.New("current year must be greater than expiration year"), "004"
+		return false, errors.New("invalid expiration year"), "004"
 	}
 
 	if expYear == currentYear && int(currentMonth) > expMonth {

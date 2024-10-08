@@ -36,11 +36,10 @@ func main() {
 	}
 
 	config := config.LoadConfig()
-	logger.Infof("Using host port: %s", config.HostPort)
+	logger.Infof("Using host port: %s", config.Host)
 
 	services := service.NewService()
 	handlers := handlers.NewHandlers(services)
-	logger.Infof("Using host port: %s", config.HostPort)
 	server := server.NewServer(handlers, logger)
-	server.Start(config.HostPort)
+	server.Start(config.Host)
 }
