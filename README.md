@@ -1,5 +1,7 @@
 ﻿# Card_validator
 
+ A simple card validation service using Luhn algorithm to validate card number.
+
  Steps to launch:
 1. Rename Environment Files:
     Change .example.env to .env in both the configs and deployments directories.
