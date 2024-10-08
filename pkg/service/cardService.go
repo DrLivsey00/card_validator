@@ -48,7 +48,7 @@ func IsValidNumber(number string) (bool, error, string) {
 		sum += digit
 	}
 	if !(sum%10 == 0) {
-		return false, errors.New("failing Luhn Algorithm Check "), "006"
+		return false, errors.New("failing Luhn Algorithm Check"), "006"
 	}
 	return true, nil, ""
 }
@@ -63,7 +63,7 @@ func IsValidExpDate(expMonth, expYear int) (bool, error, string) {
 	}
 
 	if expYear == currentYear && int(currentMonth) > expMonth {
-		return false, errors.New("expiration month must be less than current month"), "005"
+		return false, errors.New("expiration month must be greater than current month"), "005"
 	}
 	return true, nil, ""
 }

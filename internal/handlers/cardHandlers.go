@@ -31,7 +31,7 @@ func (h *Handlers) IsValidCard(c echo.Context) error {
 	}
 	valid, err, code := h.service.IsValid(card.Number, card.ExpirationMonth, card.ExpirationYear)
 	if err != nil {
-		return c.JSON(http.StatusBadRequest, &Response{
+		return c.JSON(http.StatusOK, &Response{
 			Valid: false,
 			Error: &ErrorResponse{
 				Code:    code,
