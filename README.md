@@ -11,3 +11,5 @@
 3. Run Deployment:
     Navigate to the project root (where your Makefile is located).
     Run the command: **make deploy**
+   
+All service logs are stored in **logs/app.log**
