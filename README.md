@@ -8,4 +8,4 @@
     Set HOST_PORT to your desired port number (e.g., HOST_PORT=8080).
 3. Run Deployment:
     Navigate to the project root (where your Makefile is located).
-    Run the command:
+    Run the command: **make deploy**
